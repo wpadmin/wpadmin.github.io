@@ -8,7 +8,7 @@ module.exports = {
   favicon: 'img/favicon.ico',
   organizationName: 'wpadmin',
   projectName: 'wpadmin.github.io',
-  deploymentBranch: 'gh-pages', // Ветка для деплоя
+  deploymentBranch: 'main', // Ветка для деплоя
   trailingSlash: false,
   presets: [
     [
