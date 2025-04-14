@@ -3,21 +3,89 @@
  * and scoped locally.
  */
 
-.heroBanner {
-  padding: 4rem 0;
+.main {
+  padding: 2rem 0;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
   text-align: center;
+  padding: 0 1rem;
+  max-width: 800px;
+}
+
+.photoContainer {
   position: relative;
-  overflow: hidden;
+  margin-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-@media screen and (max-width: 996px) {
-  .heroBanner {
-    padding: 2rem;
-  }
+.photo {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
 }
 
-.buttons {
+.photo:hover {
+  transform: scale(1.05);
+}
+
+.toggleButton {
+  margin-top: 1rem;
+  padding: 0.5rem;
+  border-radius: 25px;
+  border: 2px solid #ccc;
+  background: #fff;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.3s ease;
+  min-width: 150px;
+}
+
+.toggleButton:hover {
+  border-color: #888;
+}
+
+.toggleKnob {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: #f0f0f0;
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.aiMode .toggleKnob {
+  background: #e6f3ff;
+}
+
+.toggleLabel {
+  font-size: 14px;
+  color: #666;
+}
+
+.aiMode {
+  border-color: #0066cc;
+  background: #f5f9ff;
+}
+
+h1 {
+  margin-bottom: 1rem;
+}
+
+p {
+  font-size: 1.25rem;
+  line-height: 1.25;
 }

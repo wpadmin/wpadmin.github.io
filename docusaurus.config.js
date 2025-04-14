@@ -1,5 +1,5 @@
 module.exports = {
-  title: 'Dev Notes',
+  title: 'wpadmin',
   tagline: 'Справочник разработчика',
   url: 'https://wpadmin.github.io',
   baseUrl: '/',
