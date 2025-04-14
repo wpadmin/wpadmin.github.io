@@ -2,7 +2,7 @@ module.exports = {
   title: 'Dev Notes',
   tagline: 'Справочник разработчика',
   url: 'https://wpadmin.github.io',
-  baseUrl: 'wpadmin.github.io',
+  baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
