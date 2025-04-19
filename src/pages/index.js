@@ -3,6 +3,7 @@ import Layout from '@theme/Layout';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import styles from './index.module.css';
 import clsx from 'clsx';
+import Link from '@docusaurus/Link';
 
 export default function Home() {
   const [isAiMode, setIsAiMode] = useState(false);
@@ -82,6 +83,11 @@ export default function Home() {
         <div className={styles.container}>
           <div className={styles.timeStamp}>
             <span>{dateTimeInfo}</span>
+            <Link
+              className="button button--secondary button--lg"
+              to="/docs/intro">
+              Доки
+            </Link>
           </div>
 
           <div className={styles.photoContainer}>

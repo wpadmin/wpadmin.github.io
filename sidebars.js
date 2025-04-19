@@ -1,6 +1,13 @@
 module.exports = {
   tutorialSidebar: [
     'intro',
+    {
+      type: 'category',
+      label: 'App',
+      items: [
+        'app/phpmyadmin',
+      ],
+    },
     'javascript',
     'typescript',
     'php',
