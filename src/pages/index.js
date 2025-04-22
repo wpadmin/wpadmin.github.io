@@ -85,6 +85,11 @@ export default function Home() {
             <span>{dateTimeInfo}</span>
             <Link
               className="button button--secondary button--lg"
+              to="/blog">
+              Мои Записи
+            </Link>
+            <Link
+              className="button button--secondary button--lg"
               to="/docs/intro">
               Доки
             </Link>
