@@ -2,7 +2,8 @@ wpadmin:
   name: "Evgeni Vladimirovich"
   title: "WordPress Developer"
   url: "https://wpadmin.github.io"
-  imageURL: "https://github.com/wpadmin/wpadmin.png" # изменил image_url на imageURL
+  imageURL: "https://avatars.githubusercontent.com/u/4085126" # изменил image_url на imageURL
   socials:
     instagram: "wpadmin"
     github: "wpadmin"
+    youtube: "shavrin"

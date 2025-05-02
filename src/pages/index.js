@@ -71,6 +71,7 @@ export default function Home() {
     tools: [
       { name: 'Git' },
       { name: 'VS Code' },
+      { name: 'PhpStorm' },
     ]
   };
 
@@ -83,22 +84,24 @@ export default function Home() {
         <div className={styles.container}>
           <div className={styles.timeStamp}>
             <span>{dateTimeInfo}</span>
-            <Link
-              className="button button--secondary button--lg"
-              to="/blog">
-              Мои Записи
-            </Link>
-            <Link
-              className="button button--secondary button--lg"
-              to="/docs/intro">
-              Доки
-            </Link>
+            <div>
+              <Link
+                className="button button--secondary button--lg"
+                to="/blog">
+                Мои Записи
+              </Link>
+              <Link
+                className="button button--secondary button--lg"
+                to="/docs/intro">
+                Доки
+              </Link>
+            </div>
           </div>
 
           <div className={styles.photoContainer}>
             <img
-              src={isAiMode ? "/img/ai-photo.jpg" : "/img/real-photo.jpg"}
-              alt={isAiMode ? "AI версия фото" : "Реальное фото"}
+              src={isAiMode ? "/img/real-photo.jpg" : "/img/ai-photo.jpg"}
+              alt={isAiMode ? "Реальное фото" : "AI версия фото"}
               className={styles.photo}
             />
             <button
@@ -106,21 +109,26 @@ export default function Home() {
               className={clsx(styles.toggleButton, {
                 [styles.aiMode]: isAiMode
               })}
-              aria-label="Toggle photo mode"
+              aria-label="Переключатель Фото"
             >
               <div className={styles.toggleKnob}>
-                {isAiMode ? '🤖' : '👤'}
+                {isAiMode ? '👤' : '🤖'}
               </div>
               <span className={styles.toggleLabel}>
-                {isAiMode ? 'AI версия' : 'Реальное фото'}
+                {isAiMode ? 'Реальное фото' : 'AI версия'}
               </span>
             </button>
           </div>
 
           <div className={styles.introduction}>
-            <h1>Салют, я Web-разработчик! 👋</h1>
+            <h1>Я — Full Stack WordPress Developer.</h1>
             <p className={styles.bio}>
-              Специализируюсь на разработке современных веб-приложений на WordPress и Nextjs.
+              Специализируюсь на разработке современных веб-приложений на WordPress и Next.js. SEO и быстрые старты на базе готовых решений.
+              <br />
+              Хотите обсудить ваш проект? &nbsp;
+              <a href="mailto:&#51;&#56;&#48;&#56;&#57;&#50;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;">
+                Напишите мне на почту
+              </a>.
             </p>
           </div>
 

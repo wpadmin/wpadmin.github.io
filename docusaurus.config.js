@@ -1,3 +1,5 @@
+import { themes as prismThemes } from 'prism-react-renderer'
+
 module.exports = {
   title: 'wpadmin: WordPress разработчик',
   tagline: 'Справочник разработчика',
@@ -65,5 +67,31 @@ module.exports = {
       { name: 'og:description', content: 'wpadmin: дизайнер и WordPress разработчик' },
       { name: 'twitter:card', content: 'summary_large_image' },
     ],
+
+    prism: {
+      theme: prismThemes.github,
+      additionalLanguages: [
+        // Ваши текущие языки
+        'powershell',
+        'php',
+        'json',
+        'yaml',
+        'bash',
+        // Веб-ориентированные языки
+        'css',
+        'scss',
+        'jsx',
+        'tsx',
+        'graphql',
+        'typescript',
+        'sql',
+        'regex',
+        'markup-templating', // для шаблонизаторов
+        'docker',
+        'nginx',
+        'http',
+        'javascript',
+      ],
+    },
   },
 };

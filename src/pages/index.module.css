@@ -293,3 +293,9 @@
   outline: 2px solid var(--text-primary);
   outline-offset: 2px;
 }
+
+
+.button {
+  margin-left: 2px;
+  margin-right: 2px;
+}
