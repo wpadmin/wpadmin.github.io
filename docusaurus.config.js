@@ -10,9 +10,15 @@ import {themes as prismThemes} from 'prism-react-renderer';
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'My Site',
-  tagline: 'Dinosaurs are cool',
+  title: 'Code==Poetry',
+  tagline: 'Код — это поэзия',
   favicon: 'img/favicon.ico',
+  url: 'https://wpadmin.github.io',      // GitHub Pages
+  baseUrl: '/',
+  organizationName: 'wpadmin',           // GitHub username
+  projectName: 'wpadmin.github.io'  ,    // GitHub repo name  
+  deploymentBranch: 'gh-pages',          // GitHub Pages branch  
+  trailingSlash: false,
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
   future: {
