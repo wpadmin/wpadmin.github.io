@@ -1,7 +1,8 @@
 ---
 sidebar_position: 1
+sidebar_label: 'Салют, мир!'
 ---
 
-# Welcome
+# Салют, мир!
 
-Documentation home page.
+Главная страница документации.
