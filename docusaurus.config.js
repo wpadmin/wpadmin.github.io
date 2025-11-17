@@ -4,7 +4,7 @@ import {themes as prismThemes} from 'prism-react-renderer';
 const config = {
   // site metadata
   title: 'Code==Poetry',
-  tagline: 'Code is poetry',
+  tagline: 'Код — это поэзия',
   favicon: 'img/favicon.ico',
 
   // deployment
@@ -53,9 +53,9 @@ const config = {
           type: 'docSidebar',
           sidebarId: 'tutorialSidebar',
           position: 'left',
-          label: 'Docs',
+          label: 'Документация',
         },
-        {to: '/blog', label: 'Blog', position: 'left'},
+        {to: '/blog', label: 'Блог', position: 'left'},
         {
           href: 'https://github.com/wpadmin',
           label: 'GitHub',

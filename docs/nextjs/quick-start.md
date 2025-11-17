@@ -1,97 +1,97 @@
 ---
 sidebar_position: 1
-title: Quick Start
-description: Next.js project setup with TypeScript, Tailwind, shadcn/ui, Drizzle, and Payload CMS
+title: Быстрый старт
+description: Настройка проекта Next.js с TypeScript, Tailwind, shadcn/ui, Drizzle и Payload CMS
 ---
 
-# Next.js Quick Start
+# Быстрый старт с Next.js
 
-Production-ready setup with modern stack.
+Готовый к продакшену стек с современными технологиями.
 
-## Tech Stack
+## Технологический стек
 
-- **Next.js 15** - React framework with App Router
-- **TypeScript** - Type safety
-- **Tailwind CSS** - Utility-first styling
-- **shadcn/ui** - Accessible components
-- **Drizzle ORM** - Type-safe database
-- **Payload CMS** - Headless CMS
-- **Heroicons** - Icon library
+- **Next.js 15** — React-фреймворк с App Router
+- **TypeScript** — типобезопасность
+- **Tailwind CSS** — утилитарные стили
+- **shadcn/ui** — доступные компоненты
+- **Drizzle ORM** — типобезопасная работа с БД
+- **Payload CMS** — headless CMS
+- **Heroicons** — библиотека иконок
 
-## Setup Checklist
+## Чек-лист установки
 
-### 1. Initialize Project
+### 1. Инициализация проекта
 
 ```bash
 npx create-next-app@latest richsoft --typescript --tailwind --app
 cd richsoft
 ```
 
-Creates Next.js app with:
-- TypeScript configuration
-- Tailwind CSS setup
-- App Router structure
-- ESLint configuration
+Создаёт приложение Next.js с:
+- конфигурацией TypeScript
+- настроенным Tailwind CSS
+- структурой App Router
+- настроенным ESLint
 
-### 2. Add UI Components
+### 2. Добавление UI-компонентов
 
 ```bash
 npx shadcn@latest init
 npx shadcn@latest add button card dialog sheet
 ```
 
-Installs shadcn/ui with:
-- Radix UI primitives
-- Tailwind styling
-- Accessible by default
+Устанавливает shadcn/ui с:
+- примитивами Radix UI
+- стилями Tailwind
+- доступностью из коробки
 
-### 3. Setup Database
+### 3. Настройка базы данных
 
 ```bash
 npm install drizzle-orm @neondatabase/serverless
 npm install -D drizzle-kit
 ```
 
-Drizzle ORM features:
-- Type-safe queries
-- Automatic migrations
-- Postgres, MySQL, SQLite support
+Возможности Drizzle ORM:
+- типобезопасные запросы
+- автоматические миграции
+- поддержка Postgres, MySQL, SQLite
 
-### 4. Add CMS
+### 4. Добавление CMS
 
 ```bash
 npx create-payload-app@latest
 ```
 
-Payload CMS provides:
-- Admin panel
-- API generation
-- Media management
-- Authentication
+Payload CMS предоставляет:
+- админ-панель
+- генерацию API
+- управление медиа
+- аутентификацию
 
-### 5. Install Icons
+### 5. Установка иконок
 
 ```bash
 npm install @heroicons/react
 ```
 
-Heroicons includes:
-- 300+ SVG icons
-- Outline and solid variants
-- MIT licensed
+Heroicons включает:
+- 300+ SVG-иконок
+- варианты outline и solid
+- лицензия MIT
 
-### 6. Add Utilities
+### 6. Добавление утилит
 
 ```bash
 npm install clsx tailwind-merge
 ```
 
-Utilities for:
-- Conditional class names
-- Tailwind class merging
-- Clean component APIs
+Утилиты для:
+- условных классов
+- слияния классов Tailwind
+- чистого API компонентов
 
-## Production Config
+## Конфигурация для продакшена
 
 ```typescript title="next.config.mjs"
 /** @type {import('next').NextConfig} */
@@ -111,19 +111,19 @@ export default {
 };
 ```
 
-### Configuration Details
+### Детали конфигурации
 
-**Image Optimization:**
-- AVIF and WebP formats
-- Automatic compression
-- Lazy loading
+**Оптимизация изображений:**
+- форматы AVIF и WebP
+- автоматическое сжатие
+- ленивая загрузка
 
 **Partial Prerendering (PPR):**
-- Static shell + dynamic content
-- Faster initial load
-- Better SEO
+- статическая оболочка + динамический контент
+- быстрая начальная загрузка
+- лучшее SEO
 
-## Project Structure
+## Структура проекта
 
 ```plaintext
 richsoft/
@@ -144,30 +144,30 @@ richsoft/
 └── package.json
 ```
 
-## Environment Variables
+## Переменные окружения
 
 ```bash title=".env.local"
 DATABASE_URL="postgres://..."
 PAYLOAD_SECRET="your-secret"
 ```
 
-## Next Steps
+## Следующие шаги
 
-1. Configure database schema with Drizzle
-2. Set up authentication
-3. Create API routes
-4. Deploy to Vercel
+1. Настроить схему БД с Drizzle
+2. Настроить аутентификацию
+3. Создать API-роуты
+4. Задеплоить на Vercel
 
-## Useful Commands
+## Полезные команды
 
 ```bash
-# Development
+# Разработка
 npm run dev
 
-# Build
+# Сборка
 npm run build
 
-# Database migrations
+# Миграции БД
 npx drizzle-kit generate
 npx drizzle-kit migrate
 

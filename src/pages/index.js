@@ -19,7 +19,7 @@ function HomepageHeader() {
 
 export default function Home() {
   return (
-    <Layout description="Code is poetry">
+    <Layout description="Код — это поэзия">
       <HomepageHeader />
       <main></main>
     </Layout>
