@@ -1,66 +1,61 @@
-import { themes as prismThemes } from 'prism-react-renderer';
+import {themes as prismThemes} from 'prism-react-renderer';
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  // Основная информация сайта
+  // site metadata
   title: 'Code==Poetry',
-  tagline: 'Код — это поэзия',
+  tagline: 'Code is poetry',
   favicon: 'img/favicon.ico',
 
+  // deployment
   url: 'https://wpadmin.github.io',
   baseUrl: '/',
   organizationName: 'wpadmin',
   projectName: 'wpadmin.github.io',
-  deploymentBranch: 'gh-pages',
   trailingSlash: false,
 
+  onBrokenLinks: 'throw',
+  onBrokenMarkdownLinks: 'warn',
+
+  // i18n
   i18n: {
-    defaultLocale: 'ru',
-    locales: ['ru', 'en'],
+    defaultLocale: 'en',
+    locales: ['en'],
   },
 
-  // Базовые плагины и конфигурация
+  // presets
   presets: [
     [
       'classic',
-      ({
+      {
         docs: {
           sidebarPath: './sidebars.js',
         },
         blog: {
           showReadingTime: true,
-          feedOptions: {
-            type: ['rss', 'atom'],
-            xslt: true,
-          },
         },
         theme: {
           customCss: './src/css/custom.css',
         },
-      }),
+      },
     ],
   ],
 
-  // Оформление и навигация
-  themeConfig: ({
-    image: 'img/docusaurus-social-card.jpg',
+  // theme
+  themeConfig: {
     colorMode: {
       respectPrefersColorScheme: true,
     },
     navbar: {
       title: 'Code==Poetry',
-      logo: {
-        alt: 'Logo',
-        src: 'img/logo.svg',
-      },
       items: [
         {
           type: 'docSidebar',
           sidebarId: 'tutorialSidebar',
           position: 'left',
-          label: 'Документация',
+          label: 'Docs',
         },
-        { to: '/blog', label: 'Блог', position: 'left' },
+        {to: '/blog', label: 'Blog', position: 'left'},
         {
           href: 'https://github.com/wpadmin',
           label: 'GitHub',
@@ -70,25 +65,13 @@ const config = {
     },
     footer: {
       style: 'dark',
-      links: [
-        {
-          title: 'Документация',
-          items: [
-            {
-              label: 'Начало',
-              to: '/docs/intro',
-            },
-          ],
-        },
-      ],
-      copyright: `© ${new Date().getFullYear()} Code==Poetry. Built with Docusaurus.`,
+      copyright: `${new Date().getFullYear()} Code==Poetry`,
     },
-    // Подсветка синтаксиса в коде
     prism: {
       theme: prismThemes.github,
       darkTheme: prismThemes.dracula,
     },
-  }),
+  },
 };
 
 export default config;

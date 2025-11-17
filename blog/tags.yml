@@ -1,19 +1,29 @@
-facebook:
-  label: Facebook
-  permalink: /facebook
-  description: Facebook tag description
+general:
+  label: General
+  permalink: /general
+  description: General topics
 
-hello:
-  label: Hello
-  permalink: /hello
-  description: Hello tag description
+nextjs:
+  label: Next.js
+  permalink: /nextjs
+  description: Next.js framework
 
-docusaurus:
-  label: Docusaurus
-  permalink: /docusaurus
-  description: Docusaurus tag description
+react:
+  label: React
+  permalink: /react
+  description: React library
 
-hola:
-  label: Hola
-  permalink: /hola
-  description: Hola tag description
+typescript:
+  label: TypeScript
+  permalink: /typescript
+  description: TypeScript language
+
+tailwind:
+  label: Tailwind CSS
+  permalink: /tailwind
+  description: Tailwind CSS framework
+
+postgres:
+  label: PostgreSQL
+  permalink: /postgres
+  description: PostgreSQL database
