@@ -4,6 +4,5 @@ wpadmin:
   url: https://github.com/wpadmin
   image_url: https://avatars.githubusercontent.com/u/4085126?v=4
   socials:
-    github: wpadmin
-    telegram: wpadmin
-    instagram: wpadmin
+    github: https://github.com/wpadmin
+    x: https://t.me/wpadmin
