@@ -2,3 +2,28 @@ general:
   label: General
   permalink: /general
   description: General topics
+
+nextjs:
+  label: Next.js
+  permalink: /nextjs
+  description: Next.js framework
+
+react:
+  label: React
+  permalink: /react
+  description: React library
+
+typescript:
+  label: TypeScript
+  permalink: /typescript
+  description: TypeScript language
+
+tailwind:
+  label: Tailwind CSS
+  permalink: /tailwind
+  description: Tailwind CSS framework
+
+postgres:
+  label: PostgreSQL
+  permalink: /postgres
+  description: PostgreSQL database
