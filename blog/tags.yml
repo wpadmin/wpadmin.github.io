@@ -1,29 +1,29 @@
 general:
-  label: General
+  label: Общее
   permalink: /general
-  description: General topics
+  description: Общие темы
 
 nextjs:
   label: Next.js
   permalink: /nextjs
-  description: Next.js framework
+  description: Фреймворк Next.js
 
 react:
   label: React
   permalink: /react
-  description: React library
+  description: Библиотека React
 
 typescript:
   label: TypeScript
   permalink: /typescript
-  description: TypeScript language
+  description: Язык TypeScript
 
 tailwind:
   label: Tailwind CSS
   permalink: /tailwind
-  description: Tailwind CSS framework
+  description: Фреймворк Tailwind CSS
 
 postgres:
   label: PostgreSQL
   permalink: /postgres
-  description: PostgreSQL database
+  description: База данных PostgreSQL
