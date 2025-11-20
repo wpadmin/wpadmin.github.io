@@ -28,14 +28,7 @@ const config = {
     },
   },
 
-  // metadata
-  metadata: [
-    {name: 'keywords', content: 'программирование, разработка, веб-разработка, javascript, typescript, react, nextjs'},
-    {name: 'author', content: 'Женя'},
-    {property: 'og:type', content: 'website'},
-  ],
-
-  // head tags for improved SEO
+  // head tags for performance optimization
   headTags: [
     {
       tagName: 'link',
@@ -86,6 +79,11 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       image: 'img/docusaurus-social-card.jpg',
+      metadata: [
+        {name: 'keywords', content: 'программирование, разработка, веб-разработка, javascript, typescript, react, nextjs'},
+        {name: 'author', content: 'Женя'},
+        {property: 'og:type', content: 'website'},
+      ],
       colorMode: {
         respectPrefersColorScheme: true,
       },
