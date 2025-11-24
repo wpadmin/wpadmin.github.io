@@ -1,0 +1,8 @@
+{
+  "label": "Установка на VPS",
+  "position": 1,
+  "link": {
+    "type": "generated-index",
+    "description": "Пошаговое руководство по установке WordPress на VPS с Debian 12: от настройки сервера до запуска сайта."
+  }
+}

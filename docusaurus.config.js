@@ -15,7 +15,6 @@ const config = {
   trailingSlash: false,
 
   onBrokenLinks: 'throw',
-  onBrokenMarkdownLinks: 'warn',
 
   // i18n
   i18n: {
@@ -43,6 +42,9 @@ const config = {
   markdown: {
     format: 'mdx',
     mermaid: true,
+    hooks: {
+      onBrokenMarkdownLinks: 'warn',
+    },
   },
 
   // presets
@@ -111,6 +113,23 @@ const config = {
       prism: {
         theme: prismThemes.github,
         darkTheme: prismThemes.dracula,
+        additionalLanguages: [
+          'bash',
+          'nginx',
+          'ini',
+          'sql',
+          'php',
+          'javascript',
+          'typescript',
+          'jsx',
+          'tsx',
+          'css',
+          'scss',
+          'json',
+          'yaml',
+          'docker',
+          'git',
+        ],
       },
     }),
 };

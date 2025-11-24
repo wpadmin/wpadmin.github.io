@@ -1,0 +1,8 @@
+{
+  "label": "WordPress",
+  "position": 3,
+  "link": {
+    "type": "generated-index",
+    "description": "Полное руководство по WordPress: от установки на VPS до разработки плагинов и тем."
+  }
+}
