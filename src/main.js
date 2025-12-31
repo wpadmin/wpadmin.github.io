@@ -1,5 +1,5 @@
 import './style.css'
-import { animate } from 'motion'
+import { animate, inView } from 'motion'
 
 const yearElement = document.querySelector('#current-year')
 if (yearElement) {
@@ -66,5 +66,47 @@ if (button) {
     duration: 0.4,
     delay: 0.4,
     easing: [0.22, 1, 0.36, 1]
+  })
+}
+
+const ecommerceTitle = document.querySelector('[data-inview="ecommerce-title"]')
+const ecommerceSubtitle = document.querySelector('[data-inview="ecommerce-subtitle"]')
+const ecommerceImage = document.querySelector('[data-inview="ecommerce-image"]')
+
+if (ecommerceTitle) {
+  inView(ecommerceTitle, () => {
+    animate(ecommerceTitle, {
+      opacity: [0, 1],
+      transform: ['translateY(40px)', 'translateY(0)']
+    }, {
+      duration: 0.6,
+      easing: [0.22, 1, 0.36, 1]
+    })
+  })
+}
+
+if (ecommerceSubtitle) {
+  inView(ecommerceSubtitle, () => {
+    animate(ecommerceSubtitle, {
+      opacity: [0, 1],
+      transform: ['translateY(30px)', 'translateY(0)']
+    }, {
+      duration: 0.5,
+      delay: 0.15,
+      easing: [0.22, 1, 0.36, 1]
+    })
+  })
+}
+
+if (ecommerceImage) {
+  inView(ecommerceImage, () => {
+    animate(ecommerceImage, {
+      opacity: [0, 1],
+      transform: ['translateY(60px)', 'translateY(0)']
+    }, {
+      duration: 0.7,
+      delay: 0.3,
+      easing: [0.22, 1, 0.36, 1]
+    })
   })
 }
