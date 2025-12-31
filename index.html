@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="ru" class="scroll-smooth">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>wpadmin — Сайты и интернет-магазины на WordPress</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap&subset=cyrillic"
+    rel="stylesheet">
+</head>
+
+<body>
+  <header class="fixed top-0 left-0 w-full z-[100] transition-all duration-300 bg-dark-gray-900/95 md:bg-transparent backdrop-blur-sm md:backdrop-blur-none">
+    <div class="container mx-auto px-4 py-6 flex items-center justify-between">
+      <a href="#hero" class="flex items-center">
+        <img src="/wpadmin.svg" alt="wpadmin" class="w-[120px]">
+      </a>
+
+      <nav class="hidden md:flex items-center gap-8 text-base font-['Inter_Tight'] font-black uppercase">
+      </nav>
+
+      <button type="button" id="mobile-menu-button" class="md:hidden w-10 h-10 flex flex-col items-center justify-center gap-2" aria-label="меню" aria-expanded="false">
+        <span class="w-7 h-0.5 bg-white transition-all duration-300 ease-in-out"></span>
+        <span class="w-7 h-0.5 bg-white transition-all duration-300 ease-in-out"></span>
+        <span class="w-7 h-0.5 bg-white transition-all duration-300 ease-in-out"></span>
+      </button>
+    </div>
+  </header>
+
+  <div id="mobile-menu-overlay" class="md:hidden fixed inset-0 bg-dark-gray-900/80 opacity-0 pointer-events-none transition-opacity duration-300 z-[90]"></div>
+
+  <nav id="mobile-menu" class="md:hidden fixed top-0 right-0 h-full w-80 max-w-[85vw] bg-dark-gray-800 shadow-2xl transform translate-x-full transition-transform duration-300 ease-out z-[95]">
+    <div class="flex flex-col h-full pt-24 px-8 pb-8">
+      <div class="flex flex-col gap-6 text-lg font-['Inter_Tight'] font-black uppercase">
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <section id="hero" class="relative w-full min-h-screen flex items-center justify-center overflow-hidden pt-20">
+      <img src="/promo.jpg" alt="background" class="absolute inset-0 w-full h-full object-cover">
+      <div class="absolute inset-0 bg-gradient-to-b from-dark-gray-900/90 via-dark-gray-900/70 to-dark-gray-900"></div>
+
+      <div class="container mx-auto px-4 relative z-10 text-center py-8">
+        <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-medium text-white mb-6 leading-tight opacity-0 animate-fade-up">
+          Делаю сайты и интернет-магазины<br>на WordPress любого уровня сложности
+        </h1>
+
+        <div class="flex flex-col items-center gap-12 mt-12 opacity-0 animate-fade-up-delay">
+          <div class="flex flex-col md:flex-row items-center justify-center gap-6">
+            <img src="https://github.com/wpadmin.png" alt="wpadmin" class="w-28 h-28 rounded-full border-4 border-white shadow-xl shrink-0">
+
+            <div class="relative bg-white rounded-2xl px-5 py-5 md:px-8 md:py-6 shadow-xl max-w-2xl speech-bubble-bottom md:speech-bubble-left">
+              <p class="text-dark-gray-900 text-base md:text-lg font-medium leading-relaxed text-center md:text-left">
+                Салют! Меня зовут Евгений. Более 10 лет разрабатываю сайты для бизнеса. Благодаря наработанным решениям проекты запускаются быстрее и экономят бюджет. Поговорим о ваших задачах?
+              </p>
+            </div>
+          </div>
+
+          <a href="https://t.me/wpadmin" target="_blank" rel="noopener noreferrer"
+            class="px-12 py-5 bg-gradient-to-r from-accent-red via-accent-orange to-accent-orange hover:shadow-2xl hover:shadow-accent-orange/50 text-white font-semibold uppercase rounded-full transition-all text-xl">
+            обсудить проект
+          </a>
+        </div>
+      </div>
+
+      <button type="button" class="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 animate-bounce cursor-pointer"
+        id="scroll-indicator" aria-label="прокрутить вниз">
+        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+        </svg>
+      </button>
+    </section>
+
+  </main>
+
+  <footer class="w-full py-8 bg-dark-gray-900 text-white">
+    <div class="container mx-auto px-4 flex items-center justify-between">
+      <p class="text-sm">© «wpadmin», <span id="current-year"></span></p>
+
+      <div class="flex items-center gap-2">
+        <p class="text-sm">Proudly hosted by</p>
+        <a href="https://github.com" target="_blank" rel="noopener noreferrer" title="GitHub">
+          <img src="/github-mark-white.svg" alt="GitHub" class="h-10">
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <script type="module" src="/src/main.ts"></script>
+</body>
+
+</html>
