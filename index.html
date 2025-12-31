@@ -4,14 +4,20 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="index, follow">
 
-  <title>Евгений — специалист по WordPress. Услуги по созданию и доработке сайтов, интернет-магазинов</title>
+  <title>Евгений — специалист по WordPress. Услуги по созданию, продвижению и доработке сайтов</title>
   <meta name="description"
-    content="Профессиональная разработка сайтов и интернет-магазинов на WordPress. Более 10 лет опыта. Создание сайтов любой сложности под ключ. Быстрый запуск и экономия бюджета.">
+    content="Профессиональная разработка сайтов и интернет-магазинов на WordPress. Настройка SEO. Более 10 лет опыта. Создание сайтов любой сложности под ключ. Быстрый запуск и экономия бюджета.">
   <meta name="keywords"
-    content="wordpress, woo, woocommerce разработка, wordpress разработчик, сайт на wordpress под ключ, wordpress программист">
+    content="wordpress, woo, woocommerce разработка, wordpress разработчик, сайт на wordpress, wordpress программист, seo, seo специалист">
 
   <link rel="canonical" href="https://wpadmin.github.io/">
+
+  <!-- Favicon -->
+  <link rel="icon" href="/favicon.ico" sizes="48x48">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://wpadmin.github.io/">
@@ -29,6 +35,7 @@
     content="Профессиональная разработка сайтов и интернет-магазинов на WordPress. Более 10 лет опыта.">
   <meta name="twitter:image" content="https://wpadmin.github.io/promo.jpg">
 
+  <meta name="format-detection" content="telephone=no, date=no, email=no, address=no">
   <meta name="author" content="Евгений (wpadmin)">
   <meta name="telegram:username" content="@wpadmin">
 
@@ -97,6 +104,8 @@
   }
   </script>
 
+  <!-- Preload ресурсов -->
+  <link rel="preload" href="/promo.jpg" as="image">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
@@ -107,35 +116,12 @@
 <body>
   <header
     class="fixed top-0 left-0 w-full z-[100] transition-all duration-300 bg-dark-gray-900/95 md:bg-transparent backdrop-blur-sm md:backdrop-blur-none">
-    <div class="container mx-auto px-4 py-6 flex items-center justify-between">
-      <a href="#hero" class="flex items-center">
-        <img src="/wpadmin.svg" alt="wpadmin" class="w-[120px]">
+    <div class="container mx-auto px-4 py-6 flex justify-center">
+      <a href="#hero">
+        <img src="/wpadmin.svg" alt="wpadmin" class="w-[100px]">
       </a>
-
-      <nav class="hidden md:flex items-center gap-8 text-base font-['Inter_Tight'] font-black uppercase">
-      </nav>
-
-      <button type="button" id="mobile-menu-button"
-        class="md:hidden w-10 h-10 flex flex-col items-center justify-center gap-2" aria-label="меню"
-        aria-expanded="false">
-        <span class="w-7 h-0.5 bg-white transition-all duration-300 ease-in-out"></span>
-        <span class="w-7 h-0.5 bg-white transition-all duration-300 ease-in-out"></span>
-        <span class="w-7 h-0.5 bg-white transition-all duration-300 ease-in-out"></span>
-      </button>
     </div>
   </header>
-
-  <div id="mobile-menu-overlay"
-    class="md:hidden fixed inset-0 bg-dark-gray-900/80 opacity-0 pointer-events-none transition-opacity duration-300 z-[90]">
-  </div>
-
-  <nav id="mobile-menu"
-    class="md:hidden fixed top-0 right-0 h-full w-80 max-w-[85vw] bg-dark-gray-800 shadow-2xl transform translate-x-full transition-transform duration-300 ease-out z-[95]">
-    <div class="flex flex-col h-full pt-24 px-8 pb-8">
-      <div class="flex flex-col gap-6 text-lg font-['Inter_Tight'] font-black uppercase">
-      </div>
-    </div>
-  </nav>
 
   <main>
     <section id="hero" class="relative w-full min-h-screen flex items-center justify-center overflow-hidden pt-20">
@@ -144,44 +130,40 @@
 
       <div class="container mx-auto px-4 relative z-10 text-center py-8">
         <h1
-          class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-medium text-white mb-6 leading-tight opacity-0 animate-fade-up">
-          Делаю сайты и интернет-магазины<br>на WordPress любого уровня сложности
+          class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-medium text-white mb-6 leading-tight"
+          data-animate="hero-title">
+          Ваш бизнес не находят в интернете?<br>Я могу это исправить
         </h1>
 
-        <div class="flex flex-col items-center gap-12 mt-12 opacity-0 animate-fade-up-delay">
+        <div class="flex flex-col items-center gap-12 mt-12">
           <div class="flex flex-col md:flex-row items-center justify-center gap-6">
             <img src="https://github.com/wpadmin.png" alt="wpadmin"
-              class="w-28 h-28 rounded-full border-4 border-white shadow-xl shrink-0">
+              class="w-28 h-28 rounded-full border-4 border-white shadow-xl shrink-0" data-animate="avatar">
 
-            <div
-              class="relative bg-white rounded-2xl px-5 py-5 md:px-8 md:py-6 shadow-xl max-w-2xl speech-bubble-bottom md:speech-bubble-left">
+            <div class="relative bg-white rounded-2xl px-5 py-5 md:px-8 md:py-6 shadow-xl max-w-2xl speech-bubble-bottom md:speech-bubble-left"
+              data-animate="bubble">
               <p class="text-dark-gray-900 text-base md:text-lg font-medium leading-relaxed text-center md:text-left">
-                Салют! Меня зовут Евгений. Более 10 лет разрабатываю сайты для бизнеса. Благодаря наработанным решениям
-                проекты запускаются быстрее и экономят бюджет. Поговорим о ваших задачах?
+                Салют! Меня зовут Евгений. Более 10 лет занимаюсь разработкой и продвижением сайтов на WordPress любой
+                сложности. Готовые решения ускоряют запуск и экономят ваш бюджет. Обсудим Ваш проект?
               </p>
             </div>
           </div>
 
           <a href="https://t.me/wpadmin" target="_blank" rel="noopener noreferrer"
-            class="px-12 py-5 bg-gradient-to-r from-accent-red via-accent-orange to-accent-orange hover:shadow-2xl hover:shadow-accent-orange/50 text-white font-semibold uppercase rounded-full transition-all text-xl">
+            class="px-12 py-5 bg-gradient-to-r from-accent-red via-accent-orange to-accent-orange hover:shadow-2xl hover:shadow-accent-orange/50 text-white font-semibold uppercase rounded-full transition-all text-xl"
+            data-animate="button">
             обсудить проект
           </a>
         </div>
       </div>
 
-      <button type="button" class="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 animate-bounce cursor-pointer"
-        id="scroll-indicator" aria-label="прокрутить вниз">
-        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
-        </svg>
-      </button>
     </section>
 
   </main>
 
   <footer class="w-full py-8 bg-dark-gray-900 text-white">
     <div class="container mx-auto px-4 flex items-center justify-between">
-      <p class="text-sm">© «wpadmin», <span id="current-year"></span></p>
+      <p class="text-sm">© Evgeni Shavrin, <span id="current-year"></span></p>
 
       <div class="flex items-center gap-2">
         <p class="text-sm">Proudly hosted by</p>
