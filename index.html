@@ -178,6 +178,52 @@
       </div>
     </section>
 
+    <!-- make offer -->
+    <section class="relative w-full bg-dark-gray-900 py-20 md:py-32">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-16">
+          <h2 class="text-5xl md:text-7xl lg:text-8xl xl:text-9xl font-medium text-white mb-8" data-inview="offer-title">
+            Сделать оффер
+          </h2>
+          <p class="text-2xl md:text-3xl lg:text-4xl text-white/80 max-w-5xl mx-auto leading-relaxed" data-inview="offer-subtitle">
+            вы можете предложить мне участие в вашем проекте на частичной (part-time) или полной (full-time) занятости
+          </p>
+        </div>
+
+        <div class="flex justify-center">
+          <div class="w-full max-w-2xl mx-auto space-y-8">
+            <div class="text-center">
+              <div class="text-8xl mb-6 transition-all duration-300" id="offer-emoji" data-inview="offer-emoji">
+                😐
+              </div>
+              <div class="text-6xl md:text-7xl font-medium text-white mb-2" id="offer-display" data-inview="offer-display">
+                150 000 ₽
+              </div>
+              <div class="text-2xl md:text-3xl text-white/60 mb-4" id="offer-period" data-inview="offer-period">в месяц</div>
+              <div class="text-xl md:text-2xl font-medium text-white/90" id="offer-type" data-inview="offer-type">
+                part-time
+              </div>
+            </div>
+
+            <div class="relative pt-4" data-inview="offer-slider-block">
+              <input type="range" min="90000" max="250000" step="10000" value="150000" id="offer-slider"
+                aria-label="Предложите зарплату"
+                class="w-full h-4 bg-white/20 rounded-lg appearance-none cursor-pointer" />
+
+              <div class="flex justify-between text-sm md:text-base text-white/60 mt-3">
+                <span>90 000 ₽</span>
+                <span>250 000 ₽</span>
+              </div>
+            </div>
+
+            <div class="text-center text-lg md:text-xl text-white/70" data-inview="offer-hint">
+              <p>Передвигайте ползунок, чтобы предложить зарплату</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
   </main>
 
   <footer class="w-full py-8 bg-dark-gray-900 text-white">
