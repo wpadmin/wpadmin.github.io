@@ -154,6 +154,49 @@ if (ecommerceCard3) {
   })
 }
 
+const seoTitle = document.querySelector('[data-inview="seo-title"]')
+const seoSubtitle = document.querySelector('[data-inview="seo-subtitle"]')
+
+if (seoTitle) {
+  inView(seoTitle, () => {
+    animate(seoTitle, {
+      opacity: [0, 1],
+      transform: ['translateY(40px)', 'translateY(0)']
+    }, {
+      duration: 0.6,
+      easing: [0.22, 1, 0.36, 1]
+    })
+  })
+}
+
+if (seoSubtitle) {
+  inView(seoSubtitle, () => {
+    animate(seoSubtitle, {
+      opacity: [0, 1],
+      transform: ['translateY(30px)', 'translateY(0)']
+    }, {
+      duration: 0.5,
+      delay: 0.15,
+      easing: [0.22, 1, 0.36, 1]
+    })
+  })
+}
+
+const seoImage = document.querySelector('[data-inview="seo-image"]')
+
+if (seoImage) {
+  inView(seoImage, () => {
+    animate(seoImage, {
+      opacity: [0, 1],
+      transform: ['translateY(40px)', 'translateY(0)']
+    }, {
+      duration: 0.6,
+      delay: 0.3,
+      easing: [0.22, 1, 0.36, 1]
+    })
+  })
+}
+
 const offerTitle = document.querySelector('[data-inview="offer-title"]')
 const offerSubtitle = document.querySelector('[data-inview="offer-subtitle"]')
 const offerEmojiElement = document.querySelector('[data-inview="offer-emoji"]')
