@@ -111,6 +111,49 @@ if (ecommerceImage) {
   })
 }
 
+const ecommerceCard1 = document.querySelector('[data-inview="ecommerce-card-1"]')
+const ecommerceCard2 = document.querySelector('[data-inview="ecommerce-card-2"]')
+const ecommerceCard3 = document.querySelector('[data-inview="ecommerce-card-3"]')
+
+if (ecommerceCard1) {
+  inView(ecommerceCard1, () => {
+    animate(ecommerceCard1, {
+      opacity: [0, 1],
+      transform: ['translateY(40px)', 'translateY(0)']
+    }, {
+      duration: 0.6,
+      delay: 0.4,
+      easing: [0.22, 1, 0.36, 1]
+    })
+  })
+}
+
+if (ecommerceCard2) {
+  inView(ecommerceCard2, () => {
+    animate(ecommerceCard2, {
+      opacity: [0, 1],
+      transform: ['translateY(40px)', 'translateY(0)']
+    }, {
+      duration: 0.6,
+      delay: 0.5,
+      easing: [0.22, 1, 0.36, 1]
+    })
+  })
+}
+
+if (ecommerceCard3) {
+  inView(ecommerceCard3, () => {
+    animate(ecommerceCard3, {
+      opacity: [0, 1],
+      transform: ['translateY(40px)', 'translateY(0)']
+    }, {
+      duration: 0.6,
+      delay: 0.6,
+      easing: [0.22, 1, 0.36, 1]
+    })
+  })
+}
+
 const offerTitle = document.querySelector('[data-inview="offer-title"]')
 const offerSubtitle = document.querySelector('[data-inview="offer-subtitle"]')
 const offerEmojiElement = document.querySelector('[data-inview="offer-emoji"]')
@@ -223,6 +266,21 @@ if (offerHint) {
   })
 }
 
+const offerButton = document.querySelector('[data-inview="offer-button"]')
+
+if (offerButton) {
+  inView(offerButton, () => {
+    animate(offerButton, {
+      opacity: [0, 1],
+      transform: ['translateY(20px)', 'translateY(0)']
+    }, {
+      duration: 0.4,
+      delay: 1.0,
+      easing: [0.22, 1, 0.36, 1]
+    })
+  })
+}
+
 const MIN_SALARY = 90000
 const MAX_SALARY = 250000
 const FULLTIME_THRESHOLD = 150000
@@ -243,6 +301,16 @@ const offerSlider = document.querySelector('#offer-slider')
 const offerDisplay = document.querySelector('#offer-display')
 const offerEmoji = document.querySelector('#offer-emoji')
 const offerType = document.querySelector('#offer-type')
+const offerContactButton = document.querySelector('#offer-contact-button')
+
+function updateOfferLink(value) {
+  const typeText = value >= FULLTIME_THRESHOLD ? 'full-time' : 'part-time'
+  const message = `Евгений, привет! Я хочу предложить вам участие в моем проекте на ${typeText} занятости. Готов предложить ${value.toLocaleString('ru-RU')} ₽ в месяц.`
+  const encodedMessage = encodeURIComponent(message)
+  if (offerContactButton) {
+    offerContactButton.href = `https://t.me/wpadmin?text=${encodedMessage}`
+  }
+}
 
 if (offerSlider && offerDisplay && offerEmoji && offerType) {
   offerSlider.addEventListener('input', (e) => {
@@ -250,6 +318,7 @@ if (offerSlider && offerDisplay && offerEmoji && offerType) {
     offerDisplay.textContent = `${value.toLocaleString('ru-RU')} ₽`
     offerEmoji.textContent = getEmoji(value)
     offerType.textContent = getOfferType(value)
+    updateOfferLink(value)
 
     const percentage = ((value - MIN_SALARY) / (MAX_SALARY - MIN_SALARY)) * 100
     e.target.style.background = `linear-gradient(to right, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.9) ${percentage}%, rgba(255, 255, 255, 0.2) ${percentage}%, rgba(255, 255, 255, 0.2) 100%)`
@@ -258,5 +327,6 @@ if (offerSlider && offerDisplay && offerEmoji && offerType) {
   const initialValue = 150000
   const initialPercentage = ((initialValue - MIN_SALARY) / (MAX_SALARY - MIN_SALARY)) * 100
   offerSlider.style.background = `linear-gradient(to right, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.9) ${initialPercentage}%, rgba(255, 255, 255, 0.2) ${initialPercentage}%, rgba(255, 255, 255, 0.2) 100%)`
+  updateOfferLink(initialValue)
 }
 
