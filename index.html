@@ -114,12 +114,23 @@
 </head>
 
 <body>
-  <header
-    class="fixed top-0 left-0 w-full z-[100] transition-all duration-300 bg-dark-gray-900/95 md:bg-transparent backdrop-blur-sm md:backdrop-blur-none">
-    <div class="container mx-auto px-4 py-6 flex justify-center">
+  <header id="main-header"
+    class="fixed top-0 left-0 w-full z-[100] transition-all duration-300">
+    <div class="container mx-auto px-4 py-6 flex justify-between items-center">
       <a href="#hero">
         <img src="/wpadmin.svg" alt="wpadmin" class="w-[100px]">
       </a>
+      <nav class="hidden md:flex gap-8">
+        <a href="#ecommerce" class="text-white hover:text-accent-orange transition-colors text-lg font-medium">
+          Разработка
+        </a>
+        <a href="#seo" class="text-white hover:text-accent-orange transition-colors text-lg font-medium">
+          Продвижение
+        </a>
+        <a href="#offer" class="text-white hover:text-accent-orange transition-colors text-lg font-medium">
+          Фриланс
+        </a>
+      </nav>
     </div>
   </header>
 
@@ -160,7 +171,7 @@
     </section>
 
     <!-- e-commerce -->
-    <section class="relative w-full bg-dark-gray-900 py-20 md:py-32">
+    <section id="ecommerce" class="relative w-full bg-dark-gray-900 py-20 md:py-32">
       <div class="container mx-auto px-4">
         <div class="text-center mb-16">
           <h2 class="text-5xl md:text-7xl lg:text-8xl xl:text-9xl font-medium text-white mb-8"
@@ -213,7 +224,7 @@
     </section>
 
     <!-- seo -->
-    <section class="relative w-full bg-dark-gray-900 py-20 md:py-32">
+    <section id="seo" class="relative w-full bg-dark-gray-900 py-20 md:py-32">
       <div class="container mx-auto px-4">
         <div class="text-center mb-16">
           <h2 class="text-5xl md:text-7xl lg:text-8xl xl:text-9xl font-medium text-white mb-8" data-inview="seo-title">
@@ -233,7 +244,7 @@
     </section>
 
     <!-- make offer -->
-    <section class="relative w-full bg-dark-gray-900 py-20 md:py-32">
+    <section id="offer" class="relative w-full bg-dark-gray-900 py-20 md:py-32">
       <div class="container mx-auto px-4">
         <div class="text-center mb-16">
           <h2 class="text-5xl md:text-7xl lg:text-8xl xl:text-9xl font-medium text-white mb-8"

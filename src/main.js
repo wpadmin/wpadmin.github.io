@@ -6,8 +6,8 @@ yearElements.forEach(el => {
   el.textContent = new Date().getFullYear().toString()
 })
 
-const header = document.querySelector('header')
-const SCROLL_THRESHOLD = window.innerHeight * 0.5
+const header = document.querySelector('#main-header')
+const SCROLL_THRESHOLD = 50
 
 function handleScroll() {
   if (!header) return
