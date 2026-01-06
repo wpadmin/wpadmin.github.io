@@ -373,3 +373,78 @@ if (offerSlider && offerDisplay && offerEmoji && offerType) {
   updateOfferLink(initialValue)
 }
 
+const mobileMenuButton = document.querySelector('#mobile-menu-button')
+const mobileMenu = document.querySelector('#mobile-menu')
+const mobileMenuLinks = document.querySelectorAll('.mobile-menu-link')
+
+let isMenuOpen = false
+
+function openMobileMenu() {
+  isMenuOpen = true
+  mobileMenuButton.classList.add('active')
+  mobileMenu.classList.add('active')
+  document.body.classList.add('menu-open')
+
+  animate(mobileMenu, {
+    opacity: [0, 1]
+  }, {
+    duration: 0.3,
+    easing: [0.22, 1, 0.36, 1]
+  })
+
+  mobileMenuLinks.forEach((link, index) => {
+    animate(link, {
+      opacity: [0, 1],
+      transform: ['translateY(20px)', 'translateY(0)']
+    }, {
+      duration: 0.4,
+      delay: 0.1 + index * 0.1,
+      easing: [0.22, 1, 0.36, 1]
+    })
+  })
+}
+
+function closeMobileMenu() {
+  isMenuOpen = false
+  mobileMenuButton.classList.remove('active')
+  document.body.classList.remove('menu-open')
+
+  mobileMenuLinks.forEach(link => {
+    animate(link, {
+      opacity: [1, 0]
+    }, {
+      duration: 0.15,
+      easing: [0.22, 1, 0.36, 1]
+    })
+  })
+
+  animate(mobileMenu, {
+    opacity: [1, 0]
+  }, {
+    duration: 0.2,
+    easing: [0.22, 1, 0.36, 1]
+  }).finished.then(() => {
+    mobileMenu.classList.remove('active')
+  })
+}
+
+function toggleMobileMenu() {
+  if (isMenuOpen) {
+    closeMobileMenu()
+  } else {
+    openMobileMenu()
+  }
+}
+
+if (mobileMenuButton) {
+  mobileMenuButton.addEventListener('click', toggleMobileMenu)
+}
+
+mobileMenuLinks.forEach(link => {
+  link.addEventListener('click', () => {
+    if (isMenuOpen) {
+      closeMobileMenu()
+    }
+  })
+})
+
