@@ -12,13 +12,13 @@
     "sharp": "^0.34.5",
     "svgo": "^4.0.0",
     "typescript": "~5.9.3",
-    "vite": "^7.2.4",
+    "vite": "^7.3.1",
     "vite-plugin-image-optimizer": "^2.0.3"
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.1.18",
-    "motion": "^12.23.26",
-    "swiper": "^12.0.3",
+    "motion": "^12.34.0",
+    "swiper": "^12.1.0",
     "tailwindcss": "^4.1.18"
   }
 }
