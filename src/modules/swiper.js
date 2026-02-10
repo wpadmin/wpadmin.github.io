@@ -1,6 +1,3 @@
-import Swiper from 'swiper'
-import { Autoplay, EffectCoverflow } from 'swiper/modules'
-
 function loadScreenshots() {
   const wrapper = document.querySelector('.showcaseSwiper .swiper-wrapper')
   if (!wrapper) return
@@ -18,7 +15,10 @@ function loadScreenshots() {
   }).join('')
 }
 
-export function initShowcaseSwiper() {
+export async function initShowcaseSwiper() {
+  const { default: Swiper } = await import('swiper')
+  const { Autoplay, EffectCoverflow } = await import('swiper/modules')
+
   loadScreenshots()
 
   return new Swiper('.showcaseSwiper', {
