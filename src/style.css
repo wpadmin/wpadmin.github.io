@@ -251,3 +251,95 @@ body.menu-open {
     height: 40%;
   }
 }
+
+/* Animated gradient borders for advantage cards */
+[data-inview="advantage-1"],
+[data-inview="advantage-2"],
+[data-inview="advantage-3"] {
+  position: relative;
+  outline: 2px solid transparent;
+  outline-offset: 4px;
+}
+
+[data-inview="advantage-1"]::after {
+  content: '';
+  position: absolute;
+  inset: -6px;
+  border-radius: inherit;
+  padding: 2px;
+  background: linear-gradient(
+    45deg,
+    #dc3232 0%,
+    #ff6b6b 25%,
+    #dc3232 50%,
+    #8b1e1e 75%,
+    #dc3232 100%
+  );
+  background-size: 200% 200%;
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  z-index: -1;
+  opacity: 0.6;
+  animation: border-glow 3s ease infinite;
+}
+
+[data-inview="advantage-2"]::after {
+  content: '';
+  position: absolute;
+  inset: -6px;
+  border-radius: inherit;
+  padding: 2px;
+  background: linear-gradient(
+    45deg,
+    #f56e28 0%,
+    #ff8c42 25%,
+    #f56e28 50%,
+    #9a4518 75%,
+    #f56e28 100%
+  );
+  background-size: 200% 200%;
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  z-index: -1;
+  opacity: 0.6;
+  animation: border-glow 3s ease infinite;
+}
+
+[data-inview="advantage-3"]::after {
+  content: '';
+  position: absolute;
+  inset: -6px;
+  border-radius: inherit;
+  padding: 2px;
+  background: linear-gradient(
+    45deg,
+    #ffb900 0%,
+    #ffd700 25%,
+    #ffb900 50%,
+    #a07700 75%,
+    #ffb900 100%
+  );
+  background-size: 200% 200%;
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  z-index: -1;
+  opacity: 0.6;
+  animation: border-glow 3s ease infinite;
+}
+
+@keyframes border-glow {
+  0%, 100% {
+    background-position: 0% 50%;
+    opacity: 0.6;
+  }
+  50% {
+    background-position: 100% 50%;
+    opacity: 0.8;
+  }
+}

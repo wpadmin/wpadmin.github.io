@@ -50,6 +50,59 @@ export function initInViewAnimations() {
     delay: 0.6
   })
 
+  animateOnView('[data-inview="ecommerce-benefits"]', {
+    transform: ['translateY(40px)', 'translateY(0)'],
+    duration: 0.8
+  })
+
+  animateOnView('[data-inview="freelance-card"]', {
+    transform: ['translateY(50px)', 'translateY(0)'],
+    duration: 0.8
+  })
+
+  animateOnView('[data-inview="freelance-cta"]', {
+    transform: ['translateY(40px)', 'translateY(0)'],
+    duration: 0.7,
+    delay: 0.2
+  })
+
+  animateOnView('[data-inview="showcase-title"]', {
+    transform: ['translateY(40px)', 'translateY(0)']
+  })
+
+  animateOnView('[data-inview="showcase-subtitle"]', {
+    transform: ['translateY(30px)', 'translateY(0)'],
+    duration: 0.5,
+    delay: 0.15
+  })
+
+  animateOnView('[data-inview="showcase-stats"]', {
+    transform: ['translateY(40px)', 'translateY(0)'],
+    duration: 0.8
+  })
+
+  animateOnView('[data-inview="showcase-cta"]', {
+    transform: ['translateY(30px)', 'translateY(0)'],
+    duration: 0.6,
+    delay: 0.2
+  })
+
+  animateOnView('[data-inview="about-title"]', {
+    transform: ['translateY(40px)', 'translateY(0)']
+  })
+
+  animateOnView('[data-inview="about-text-1"]', {
+    transform: ['translateY(30px)', 'translateY(0)'],
+    duration: 0.6,
+    delay: 0.15
+  })
+
+  animateOnView('[data-inview="about-text-2"]', {
+    transform: ['translateY(30px)', 'translateY(0)'],
+    duration: 0.6,
+    delay: 0.3
+  })
+
   animateOnView('[data-inview="seo-title"]', {
     transform: ['translateY(40px)', 'translateY(0)']
   })
