@@ -14,7 +14,7 @@ initScrollHeader()
 initMobileMenu()
 initInViewAnimations()
 
-if (document.querySelector('#hero[data-animate="hero-title"]')) {
+if (document.querySelector('[data-animate="hero-title"]')) {
   initHero()
 }
 
